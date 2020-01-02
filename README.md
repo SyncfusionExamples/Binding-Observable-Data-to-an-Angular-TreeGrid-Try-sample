@@ -2,6 +2,7 @@
 
 Use this sample to bind observable data to the Syncfusion Angular TreeGrid control. In this example, we have added code for Tree Grid modules along with edit settings and toolbar. With this, you can quickly add code to follow the instructions provided in the following tutorial video link.
 
+Watch the video now: https://www.syncfusion.com/tutorial-videos/angular/treegrid?title=binding-observable-data-to-angular-treegrid
 Documentation: https://ej2.syncfusion.com/angular/documentation/treegrid/observables/?no-cache=1#observables
 
 
