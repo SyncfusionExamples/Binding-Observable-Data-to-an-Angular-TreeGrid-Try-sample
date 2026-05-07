@@ -1,17 +1,22 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { AppComponent } from "./app.component";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AsyncPipe } from '@angular/common';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
-import {
-  TreeGridModule,
-  EditService,
-  ToolbarService
-} from "@syncfusion/ej2-angular-treegrid";
+import { AppComponent } from './app.component';
+import { TaskDataService } from './task-data.service';
+import { TreeGridModule } from '@syncfusion/ej2-angular-treegrid';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TreeGridModule],
-  providers: [EditService, ToolbarService],
-  bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(TaskDataService, { delay: 500 }),
+    TreeGridModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
